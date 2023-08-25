@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./public/output.css">
+  <title>Landing Page | [Blogr]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body>
+    <!-- header -->
+    <header class="bg-gradient-to-b from-veryLightRed to-lightRed rounded-bl-4xl">
+      <!-- header container -->
+      <div class="overlay flex flex-col justify-center text-center px-6 pb-24 text-whiteText rounded-bl-4xl">
+
+        <!-- Nav Section -->
+          <nav class="md:px-6 lg:px-12 xl:px-24 relative z-0">
+
+            <!-- Flex Container -->
+            <div class="flex items-center justify-between p-3 md:space-x-10">
+
+                  <!-- Logo & Links Container -->
+              <div class="relative md:flex items-center justify-center space-x-10">
+                <!-- Logo -->
+                <div class="cursor-pointer">
+                  <img src="images/logo.svg" alt="logo">
+                </div>
+
+                <!-- menu items -->
+                <ul class="items-center justify-center text-veryDarkBlue_headings font-ubuntu font-ubuntu_medium md:flex md:flex-row md:text-whiteText md:space-x-10">
+                  <!-- link 01 -->
+                  <li>
+                    <div id="productDesk" class="product hidden md:flex md:items-center md:justify-center">
+                      <a class="md:hover:underline md:hover:decoration-2" href="#">Product</a>
+                      <span id="span" class="cursor-pointer md:ml-2"> 
+                        <img src="images/icon-arrow-light.svg" alt="icon-arrow-light">
+                      </span>
+                    </div>
+                    <ul id="productList" class="hidden absolute top-10 bg-whiteText text-black font-ubuntu_regular py-6 pl-6 pr-14 mt-3 text-left rounded drop-shadow-2xl space-y-1.5">
+                      <li class="hover:font-ubuntu_bold">
+                        <a href="#">Overview</a>
+                      </li>
+                      <li class="hover:font-ubuntu_bold">
+                        <a href="#">Pricing</a>
+                      </li>
+                      <li class="hover:font-ubuntu_bold">
+                        <a href="#">Marketplace</a>
+                      </li>
+                      <li class="hover:font-ubuntu_bold">
+                        <a href="#">Features</a>
+                      </li>
+                      <li class="hover:font-ubuntu_bold">
+                        <a href="#">Integrations</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <!-- link 02 -->
+                  <li>
+                    <div id="companyDesk" class="company hidden md:flex md:items-center md:justify-center">
+                      <a class="md:hover:underline md:hover:decoration-2" href="#">Company</a>
+                      <span id="span" class="md:ml-2">
+                        <img src="images/icon-arrow-light.svg" alt="icon-arrow-light">
+                      </span>
+                    </div>
+                    <ul id="companyList" class="hidden absolute top-10 bg-whiteText text-black font-ubuntu_regular py-6 pl-6 pr-14 mt-3 text-left rounded drop-shadow-2xl space-y-1.5">
+                      <li class="hover:font-ubuntu_bold">
+                        <a href="#">About</a>
+                      </li>
+                      <li class="hover:font-ubuntu_bold">
+                        <a href="#">Team</a>
+                      </li>
+                      <li class="hover:font-ubuntu_bold">
+                        <a href="#">Blog</a>
+                      </li>
+                      <li class="hover:font-ubuntu_bold">
+                        <a href="#">Careers</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <!-- link 03 -->
+                  <li>
+                    <div id="connectDesk" class="connect hidden md:flex md:items-center md:justify-center">
+                      <a class="md:hover:underline md:hover:decoration-2" href="#">Connect</a>
+                      <span id="span" class="ml-2">
+                        <img src="images/icon-arrow-light.svg" alt="icon-arrow-light"> 
+                      </span>
+                    </div>
+                    <ul id="connectList" class="hidden absolute top-10 bg-whiteText text-black font-ubuntu_regular py-6 pl-6 pr-14 mt-3 text-left rounded drop-shadow-2xl space-y-1.5">
+                      <li class="hover:font-ubuntu_bold">
+                        <a href="#">Contact</a>
+                      </li>
+                      <li class="hover:font-ubuntu_bold">
+                        <a href="#">Newsletter</a>
+                      </li> 
+                      <li class="hover:font-ubuntu_bold">
+                        <a href="#">LinkedIn</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <!-- Nav Buttons Desktop -->
+              <div class="hidden md:flex">
+                  <a class="text-whiteText rounded-full px-4 py-2.5 font-ubuntu_bold font-ubuntu" href="https://www.google.com">Login</a>
+                  <a class="bg-whiteTextLow text-lightRedCTA_text rounded-full px-3 font-ubuntu_bold font-ubuntu md:hover:bg-veryLightRedCTA_hover_background md:hover:text-whiteText flex items-center" href="https://www.kedutv.com">Sign Up</a>
+              </div>
+
+              <!-- Mobile Hamburger Menu -->
+              <button id="menu-btn" class="hamburger relative block focus:outline-none md:hidden">
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+              </button>
+            </div>
+
+            <!-- Mobile Menu Items -->
+            <div class="md:hidden m-3">
+              <ul id="menu" class="absolute hidden right-0 left-0 text-veryDarkBlue_headings font-overpass flex flex-col items-center space-y-6 py-12 bg-whiteText drop-shadow-2xl rounded">
+                <!-- link 01 -->
+                <li class="w-full px-8">
+                  <div id="product" class="product flex items-center justify-center font-semibold text-xl">
+                    <a href="#">Product</a>
+                    <span id="span" class="spanPro ml-1.5 mb-px">
+                      <img src="images/icon-arrow-dark.svg" alt="icon-arrow-light">
+                    </span>
+                  </div>
+                  <ul id="productMenu" class="hidden w-full bg-grayishBlue_footer_textLow text-veryDarkBlue_headingsLow opacity-80 font-ubuntu_bold py-6 mt-3 text-center rounded space-y-3">
+                    <li class="hover:font-ubuntu_bold">
+                      <a href="#">Overview</a>
+                    </li>
+                    <li class="hover:font-ubuntu_bold">
+                      <a href="#">Pricing</a>
+                    </li>
+                    <li class="hover:font-ubuntu_bold">
+                      <a href="#">Marketplace</a>
+                    </li>
+                    <li class="hover:font-ubuntu_bold">
+                      <a href="#">Features</a>
+                    </li>
+                    <li class="hover:font-ubuntu_bold">
+                      <a href="#">Integrations</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <!-- link 02 -->
+                <li class="w-full px-8">
+                  <div id="company" class="company flex items-center justify-center font-semibold text-xl">
+                    <a href="#">Company</a>
+                    <span id="span" class="ml-1.5 mb-px">
+                      <img src="images/icon-arrow-dark.svg" alt="icon-arrow-light">
+                    </span>
+                  </div>
+                  <ul id="companyMenu" class="hidden w-full bg-grayishBlue_footer_textLow text-veryDarkBlue_headingsLow opacity-80 font-ubuntu_bold py-6 mt-3 text-center rounded space-y-3">
+                    <li class="hover:font-ubuntu_bold">
+                      <a href="#">About</a>
+                    </li>
+                    <li class="hover:font-ubuntu_bold">
+                      <a href="#">Team</a>
+                    </li>
+                    <li class="hover:font-ubuntu_bold">
+                      <a href="#">Blog</a>
+                    </li>
+                    <li class="hover:font-ubuntu_bold">
+                      <a href="#">Careers</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <!-- link 03 -->
+                <li class="w-full px-8">
+                  <div id="connect" class="connect flex items-center justify-center font-semibold text-xl">
+                    <a href="#">Connect</a>
+                    <span id="span" class="ml-1.5 mb-px">
+                      <img src="images/icon-arrow-dark.svg" alt="icon-arrow-light"> 
+                    </span>
+                  </div>
+                  <ul id="connectMenu" class="hidden w-full bg-grayishBlue_footer_textLow text-veryDarkBlue_headingsLow opacity-80 font-ubuntu_bold py-6 mt-3 text-center rounded space-y-3">
+                    <li>
+                      <a href="#">Contact</a>
+                    </li>
+                    <li>
+                      <a href="#">Newsletter</a>
+                    </li>
+                    <li>
+                      <a href="#">LinkedIn</a>
+                    </li>
+                  </ul>
+                </li>
+                <!-- HR -->
+                <div class="w-full px-8">
+                  <hr class="h-px bg-grayishBlue_footer_textLow border-0">
+                </div>
+                <!-- Nav Buttons Mobile -->
+                <div class="md:hidden flex flex-col items-center justify-center px-12">
+                  <a class="text-veryDarkBlue_headings rounded-full px-4 py-2.5 font-ubuntu_bold font-overpass text-lg" href="https://www.google.com">Login</a>
+                  <a class="bg-gradient-to-b from-veryLightRed to-lightRed text-whiteText rounded-full px-7 py-2.5 font-ubuntu_bold font-ubuntu md:hover:bg-veryLightRedCTA_hover_background md:hover:text-whiteText flex items-center" href="https://www.kedutv.com">Sign Up</a>
+                </div>
+              </ul>
+            </div>
+          </nav>
+
+        <!-- H1 HEADER -->
+        <h1 class="text-4xl font-overpass font-semibold md:text-5xl xl:text-6xl">
+          A modern publishing platform
+        </h1>
+        <p class="font-overpass text-whiteTextLow mt-3 text-lg md:text-xl">
+          Grow your audience and build your online brand
+        </p>
+        <!-- Button -->
+        <div class="mt-12">
+          <button class="bg-whiteText text-lightRedCTA_text rounded-full px-4 py-2.5 font-ubuntu_bold font-ubuntu md:hover:bg-veryLightRedCTA_hover_background md:hover:text-whiteText">
+            Start for Free
+          </button>
+          <button class="text-whiteText border rounded-full px-4 py-2 font-ubuntu_bold font-ubuntu md:hover:bg-whiteText md:hover:text-veryLightRedCTA_hover_background">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Future Design Section -->
+    <section class="mb-72">
+      <div>
+        <h2 class="text-center font-overpass font-semibold text-3xl mt-20 mb-8 text-veryDarkBlue_headings md:text-4xl md:relative md:top-6 xl:top-16">  
+          Designed for the future
+        </h2>
+        <div class="overflow-hidden flex flex-col text-center md:flex-row-reverse md:items-center md:justify-center md:container md:mx-auto">
+            <picture class="flex flex-col md:flex-row-reverse md:w-1/2">
+              <source srcset="images/illustration-editor-desktop.svg" media="(min-width: 768px)">
+                <img src="images/illustration-editor-mobile.svg"  alt="illustration-editor-mobile">
+            </picture>
+          <!-- Future Paragraph -->
+          <div class="px-12 font-overpass md:w-1/2 md:text-left">
+            <div class="mb-10">
+              <h3 class="font-semibold text-2xl text-veryDarkBlue_headings mb-4 mt-12 md:text-3xl lg:text-4xl"> 
+                Introducing an extensible editor
+              </h3>
+              <p class="text-veryDarkGrayishBlue_body_copy md:text-md lg:text-lg">
+                Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+                The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+                videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+                change the looks of a blog.
+              </p>
+            </div>
+            <div>
+              <h3 class="font-semibold text-2xl text-veryDarkBlue_headings mb-4 md:text-3xl lg:text-4xl">
+                Robust content management
+              </h3>
+              <p class="text-veryDarkGrayishBlue_body_copy md:text-md lg:text-lg">Flexible content management enables users to easily move through posts. Increase the usability of your blog by adding customized categories, sections   format, or flow. With this functionality, you’re in full control.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blogr Phone Section -->
+    <section class="relative bg-gradient-to-b from-veryDarkGrayBlue to-veryDarkDesaturatedBlue rounded-bl-4xl rounded-tr-4xl">
+      <!-- infrastructure container -->
+      <div class="flex flex-col items-center space-y-72 sm:space-y-96 md:flex-row md:space-y-0 md:py-8 lg:py-20 md:px-3 lg:space-x-32 md:container md:mx-auto">
+        <!-- images container -->
+        <div class="flex flex-col items-center md:flex-row md:w-1/2 md:py-32 xl:py-32">
+            <!-- <img class="absolute -top-52 max-w-xl md:top-52 md:w-full" src="images/bg-pattern-circles.svg" alt="bg-pattern-circles"> -->
+            <img class="absolute -top-44 md:-top-10 md:w-[24rem] lg:w-fit lg:-top-16" src="images/illustration-phones.svg" alt="illustration-phones">
+        </div>
+        <!-- infrastructure texts -->
+        <div class="text-whiteText text-center p-6 md:w-1/2 md:text-left md:p-0">
+          <h4 class="text-4xl mb-7 xl:text-5xl">State of the Art Infrastructure</h4>
+          <p class="font-overpass font-light text-md leading-8 mb-16 md:mb-0 xl:text-lg">With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+            This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tooling Section -->
+    <section class="mb-24">
+      <div>
+        <!-- <h2 class="text-center font-overpass font-semibold text-3xl mt-20 mb-8 text-veryDarkBlue_headings md:text-4xl md:relative md:top-6 xl:top-16">  
+          Designed for the future
+        </h2> -->
+        <div class="flex flex-col text-center mt-32 md:flex-row md:items-center md:justify-center md:container md:mx-auto">
+            <picture class="flex flex-col md:flex-row-reverse md:w-1/2">
+              <source srcset="images/illustration-laptop-desktop.svg" media="(min-width: 768px)">
+              <img src="images/illustration-laptop-mobile.svg"  alt="illustration-editor-mobile">
+            </picture>
+          <!-- Tooling Paragraph -->
+          <div class="px-12 font-overpass md:w-1/2 md:text-left">
+            <div class="mb-10">
+              <h3 class="font-semibold text-2xl text-veryDarkBlue_headings mb-4 mt-12 md:text-3xl lg:text-4xl"> 
+                Free, open, simple
+              </h3>
+              <p class="text-veryDarkGrayishBlue_body_copy md:text-md lg:text-lg">
+                Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+                features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+                and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+              </p>
+            </div>
+            <div>
+              <h3 class="font-semibold text-2xl text-veryDarkBlue_headings mb-4 md:text-3xl lg:text-4xl">
+                Powerful tooling
+              </h3>
+              <p class="text-veryDarkGrayishBlue_body_copy md:text-md lg:text-lg">Batteries included. We built a simple and straightforward   CLI tool that makes customization and deployment a breeze, but
+                capable of producing even the most complicated sites.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blogr Footer -->
+    <footer class="bg-veryDarkBlackBlue_footer_background rounded-tr-4xl">
+      <!-- flex container -->
+      <div class="container mx-auto space-y-3 py-20 px-6 flex flex-col items-center text-center md:flex-row md:items-start md:space-y-0 md:justify-between">
+        <!-- footer logo -->
+        <div class="p-6 md:p-0 cursor-pointer">
+          <img class="" src="images/logo.svg" alt="logo">
+        </div>
+
+        <!-- links -->
+        <div class="text-whiteTextLow">
+          <ul class="space-y-6 font-ubuntu p-6 md:flex md:text-left md:space-y-0 md:p-0 md:items-start md:space-x-44">
+            <!-- product link -->
+            <li class="space-y-6 p-6 md:space-y-0 md:p-0">
+              <a class="font-ubuntu_medium text-lg" href="#">Product</a>
+              <ul class="text-grayishBlue_footer_text space-y-1.5 md:pt-8">
+                <li class="md:hover:underline md:hover:decoration-2">
+                  <a href="#">Overview</a>
+                </li>
+                <li class="md:hover:underline md:hover:decoration-2">
+                  <a href="#">Pricing</a>
+                </li>
+                <li class="md:hover:underline md:hover:decoration-2">
+                  <a href="#">Marketplace</a>
+                </li>
+                <li class="md:hover:underline md:hover:decoration-2">
+                  <a href="#">Features</a>
+                </li>
+                <li class="md:hover:underline md:hover:decoration-2">
+                  <a href="#">Integrations</a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- company link -->
+            <li class="space-y-6 p-6 md:space-y-0 md:p-0">
+              <a class="font-ubuntu_medium text-lg" href="#">Company</a>
+              <ul class="text-grayishBlue_footer_text space-y-1.5 md:pt-8">
+                <li class="md:hover:underline md:hover:decoration-2">
+                  <a href="#">About</a>
+                </li>
+                <li class="md:hover:underline md:hover:decoration-2">
+                  <a href="#">Team</a>
+                </li>
+                <li class="md:hover:underline md:hover:decoration-2">
+                  <a href="#">Blog</a>
+                </li>
+                <li class="md:hover:underline md:hover:decoration-2">
+                  <a href="#">Careers</a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- connect link -->
+            <li class="space-y-6 p-6 md:space-y-0 md:p-0">
+              <a class="font-ubuntu_medium text-lg" href="#">Connect</a>
+              <ul class="text-grayishBlue_footer_text space-y-1.5 md:pt-8">
+                <li class="md:hover:underline md:hover:decoration-2">
+                  <a href="#">Contact</a>
+                </li>
+                <li class="md:hover:underline md:hover:decoration-2">
+                  <a href="#">Newsletter</a>
+                </li>
+                <li class="md:hover:underline md:hover:decoration-2">
+                  <a href="#">LinkedIn</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- javascript script -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+<!--
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->

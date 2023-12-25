@@ -17,7 +17,7 @@
 Built out the project to be responsive for all screen sizes both on mobile and on desktop. 
 
 ### Links
-- Solution URL: [https://www.frontendmentor.io/solutions/ecommerce-rooms-homepage-using-flexbox-and-grid-cHWanHYr3W]
+- Solution URL: [https://www.frontendmentor.io/solutions/intro-component-with-sign-up-form--B5v4UNpYI]
 - Live Site URL: [https://blogrlandingpage00.netlify.app/]
 
 ### Building my project
